@@ -39,7 +39,7 @@ pipeline {
             environment {
                 SCANNER_HOME = tool 'sonarqube'
                 ORGANIZATION = "EQL"
-                PROJECT_NAME = "my_boot_01"
+                PROJECT_NAME = "my_01_boot"
             }
             steps {
                 withSonarQubeEnv('sonarqube') {
@@ -109,7 +109,7 @@ pipeline {
        stage('Checkout Selenium') {
             steps {
                 echo "-=- Checkout project -=-"
-                git url: 'https://github.com/zaba221/example-springboot-automation-test-selenium.git'
+                git url: 'https://github.com/gabrielle-leung/example-springboot-automation-test-selenium.git'
             }
         }
         
